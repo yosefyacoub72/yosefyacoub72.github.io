@@ -1,0 +1,77 @@
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+    --a: rgba(59, 209, 94, 0.974);
+}
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23242400' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23494900' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%236d6d00' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23929200' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23b6b600' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23dbdb00' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23FFFF00' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    color: #f7f8fa;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 0.1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+figure figcaption {
+    text-align: center;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(1, 0fr);
+        grid-column-gap: 0;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    img {
+        width: 350px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+}
