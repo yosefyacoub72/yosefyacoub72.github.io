@@ -8,137 +8,76 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="main-container">
-      <figure>
-        <img src="img/Program_1/T1.jpg" alt="image1">
-        <figcaption>Exercise 1</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T2.png" alt="image2">
-        <figcaption>Exercise 2</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T3.jpg" alt="image3">
-        <figcaption>Exercise 3</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T4.jpg" alt="image4">
-        <figcaption>Exercise 4</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T5.jpg" alt="image5">
-        <figcaption>Exercise 5</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T6.png" alt="image6">
-        <figcaption>Exercise 6</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T7.jpg" alt="image7">
-        <figcaption>Exercise 7</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T8.jpg" alt="image8">
-        <figcaption>Exercise 8</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T9.jpg" alt="image9">
-        <figcaption>Exercise 9</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T10.jpg" alt="image10">
-        <figcaption>Exercise 10</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T11.jpg" alt="image11">
-        <figcaption>Exercise 11</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T12.jpg" alt="image12">
-        <figcaption>Exercise 12</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T13.png" alt="image13">
-        <figcaption>Exercise 13</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T14.jpg" alt="image14">
-        <figcaption>Exercise 14</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T15.jpg" alt="image15">
-        <figcaption>Exercise 15</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T16.jpg" alt="image16">
-        <figcaption>Exercise 16</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T17.jpg" alt="image17">
-        <figcaption>Exercise 17</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T18.jpg" alt="image18">
-        <figcaption>Exercise 18</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T19.jpg" alt="image19">
-        <figcaption>Exercise 19</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T20.jpg" alt="image20">
-        <figcaption>Exercise 20</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T21.jpg" alt="image21">
-        <figcaption>Exercise 21</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T22.jpg" alt="image22">
-        <figcaption>Exercise 22</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T23.jpg" alt="image23">
-        <figcaption>Exercise 23</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T24.jpg" alt="image24">
-        <figcaption>Exercise 24</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T25.jpg" alt="image25">
-        <figcaption>Exercise 25</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
-      <figure>
-        <img src="img/Program_1/T26.jpg" alt="image26">
-        <figcaption>Exercise 26</figcaption>
-        <figcaption>3 x 10</figcaption>
-      </figure>
+    <div id="timer" class="timer">
+      <span id="time-display" class="time-display">00:00:00:000</span>
+      <div id="progressbar" class="progressbar">
+          <div class="progress"></div>
+      </div>
+      <button id="start" class="timer-button">Start</button>
+      <button id="stop" class="timer-button">Stop</button>
+      <button id="reset" class="timer-button">Reset</button>
     </div>
+
+    <div class="buttons">
+      <button class="day-button" onclick="showExercises(0)">Day 1</button>
+      <button class="day-button" onclick="showExercises(1)">Day 2</button>
+      <button class="day-button" onclick="showExercises(2)">Day 3</button>
+    </div>
+
+    <div class="main-container" id="mainContainer">
+    </div>
+
+    <script>
+      const exercisesData = [
+        { img: 'img/Program_1/T1.jpg', name: 'Exercise 1', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T2.png', name: 'Exercise 2', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T3.jpg', name: 'Exercise 3', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T4.jpg', name: 'Exercise 4', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T5.jpg', name: 'Exercise 5', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T6.png', name: 'Exercise 6', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T7.jpg', name: 'Exercise 7', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T8.jpg', name: 'Exercise 8', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T9.jpg', name: 'Exercise 9', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T10.jpg', name: 'Exercise 10', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T11.jpg', name: 'Exercise 11', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T12.jpg', name: 'Exercise 12', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T13.png', name: 'Exercise 13', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T14.jpg', name: 'Exercise 14', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T15.jpg', name: 'Exercise 15', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T16.jpg', name: 'Exercise 16', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T17.jpg', name: 'Exercise 17', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T18.jpg', name: 'Exercise 18', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T19.jpg', name: 'Exercise 19', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T20.jpg', name: 'Exercise 20', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T21.jpg', name: 'Exercise 21', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T22.jpg', name: 'Exercise 22', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T23.jpg', name: 'Exercise 23', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T24.jpg', name: 'Exercise 24', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T25.jpg', name: 'Exercise 25', repetitions: '3 x 10' },
+        { img: 'img/Program_1/T26.jpg', name: 'Exercise 26', repetitions: '3 x 10' },
+      ];
+
+      const days = [exercisesData.slice(0, 8), exercisesData.slice(8, 16), exercisesData.slice(16, 26)];
+
+      function showExercises(dayIndex) {
+        const container = document.getElementById('mainContainer');
+        container.innerHTML = '';
+        days[dayIndex].forEach((exercise, index) => {
+          const figure = document.createElement('figure');
+          const img = document.createElement('img');
+          img.src = exercise.img;
+          img.alt = `image${index + 1}`;
+          const figcaption1 = document.createElement('figcaption');
+          figcaption1.textContent = exercise.name;
+          const figcaption2 = document.createElement('figcaption');
+          figcaption2.textContent = exercise.repetitions;
+          figure.appendChild(img);
+          figure.appendChild(figcaption1);
+          figure.appendChild(figcaption2);
+          container.appendChild(figure);
+        });
+      }
+    </script>
+    <script src="timer.js"></script>
   </body>
 </html>
