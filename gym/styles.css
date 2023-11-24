@@ -20,7 +20,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 
 img {
@@ -47,7 +47,7 @@ footer {
   opacity: 0.8;
   color: #fff;
   padding: 10px;
-  text-align: center; /* Center text in the footer */
+  text-align: center;
 }
 
 .footer-content {
@@ -70,8 +70,8 @@ footer {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center container contents horizontally */
-    justify-content: center; /* Center container contents vertically */
+    align-items: center; 
+    justify-content: center;
   }
 
   img {
@@ -80,7 +80,7 @@ footer {
   }
 
   footer {
-    text-align: center; /* Center footer content */
+    text-align: center;
   }
 }
 
