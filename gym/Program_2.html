@@ -57,32 +57,65 @@
         { img: 'img/Program_2/T26.jpg', name: 'Exercise 26', repetitions: '3 x 10' }
       ];
 
+      // const showExercises = (day) => {
+      //   const container = document.getElementById('mainContainer');
+      //   container.innerHTML = '';
+
+      //   const exercisesToShow = exercisesData.slice(day * 8, (day + 1) * 8);
+
+      //   exercisesToShow.forEach((exercise, index) => {
+      //     const figure = document.createElement('figure');
+
+      //     const img = document.createElement('img');
+      //     img.src = exercise.img;
+      //     img.alt = `image${index + 1}`;
+
+      //     const figcaption1 = document.createElement('figcaption');
+      //     figcaption1.textContent = exercise.name;
+
+      //     const figcaption2 = document.createElement('figcaption');
+      //     figcaption2.textContent = exercise.repetitions;
+
+      //     figure.appendChild(img);
+      //     figure.appendChild(figcaption1);
+      //     figure.appendChild(figcaption2);
+
+      //     container.appendChild(figure);
+      //   });
+      // };
       const showExercises = (day) => {
-        const container = document.getElementById('mainContainer');
-        container.innerHTML = '';
+  const container = document.getElementById('mainContainer');
+  container.innerHTML = '';
 
-        const exercisesToShow = exercisesData.slice(day * 8, (day + 1) * 8);
+  // Calculate the start index for the slice.
+  const startIndex = day * 8;
 
-        exercisesToShow.forEach((exercise, index) => {
-          const figure = document.createElement('figure');
+  // Adjust the end index for the slice to include all remaining exercises on the last day.
+  const endIndex = day === 2 ? exercisesData.length : (day + 1) * 8;
 
-          const img = document.createElement('img');
-          img.src = exercise.img;
-          img.alt = `image${index + 1}`;
+  const exercisesToShow = exercisesData.slice(startIndex, endIndex);
 
-          const figcaption1 = document.createElement('figcaption');
-          figcaption1.textContent = exercise.name;
+  exercisesToShow.forEach((exercise, index) => {
+    const figure = document.createElement('figure');
 
-          const figcaption2 = document.createElement('figcaption');
-          figcaption2.textContent = exercise.repetitions;
+    const img = document.createElement('img');
+    img.src = exercise.img;
+    img.alt = `image${index + 1}`;
 
-          figure.appendChild(img);
-          figure.appendChild(figcaption1);
-          figure.appendChild(figcaption2);
+    const figcaption1 = document.createElement('figcaption');
+    figcaption1.textContent = exercise.name;
 
-          container.appendChild(figure);
-        });
-      };
+    const figcaption2 = document.createElement('figcaption');
+    figcaption2.textContent = exercise.repetitions;
+
+    figure.appendChild(img);
+    figure.appendChild(figcaption1);
+    figure.appendChild(figcaption2);
+
+    container.appendChild(figure);
+  });
+};
+
     </script>
     <script src="timer.js"></script>
   </body>
