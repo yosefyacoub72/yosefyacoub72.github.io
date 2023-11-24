@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="programs_details.css">
     <title>Document</title>
-  </head>
-  <body>
+</head>
+<body>
     <div id="timer" class="timer">
-      <span id="time-display" class="time-display">00:00:00:000</span>
-      <div id="progressbar" class="progressbar">
-          <div class="progress"></div>
-      </div>
-      <button id="start" class="timer-button">Start</button>
-      <button id="stop" class="timer-button">Stop</button>
-      <button id="reset" class="timer-button">Reset</button>
+        <span id="time-display" class="time-display">00:00:00:000</span>
+        <div id="progressbar" class="progressbar">
+            <div class="progress"></div>
+        </div>
+        <button id="start" class="timer-button">Start</button>
+        <button id="stop" class="timer-button">Stop</button>
+        <button id="reset" class="timer-button">Reset</button>
     </div>
 
     <div class="buttons">
-      <button class="day-button" onclick="showExercises(0)">Day 1</button>
-      <button class="day-button" onclick="showExercises(1)">Day 2</button>
-      <button class="day-button" onclick="showExercises(2)">Day 3</button>
+        <button class="day-button" onclick="showExercises(0)">Day 1</button>
+        <button class="day-button" onclick="showExercises(1)">Day 2</button>
+        <button class="day-button" onclick="showExercises(2)">Day 3</button>
     </div>
 
-    <div class="main-container" id="mainContainer">
-    </div>
+    <div class="main-container" id="mainContainer"></div>
 
     <script>
-      const exercisesData = [
-        { img: 'img/Program_2/T1.jpg', name: 'Exercise 1', repetitions: '3 x 10' },
+        const exercisesData = [
+        { img: 'img/training_images/T1.jpg', name: 'Exercise 1', repetitions: '3 x 10' },
         { img: 'img/Program_2/T2.jpg', name: 'Exercise 2', repetitions: '3 x 10' },
         { img: 'img/Program_2/T3.jpg', name: 'Exercise 3', repetitions: '3 x 10' },
         { img: 'img/Program_2/T4.jpg', name: 'Exercise 4', repetitions: '3 x 10' },
@@ -57,68 +56,37 @@
         { img: 'img/Program_2/T26.jpg', name: 'Exercise 26', repetitions: '3 x 10' }
       ];
 
-      // const showExercises = (day) => {
-      //   const container = document.getElementById('mainContainer');
-      //   container.innerHTML = '';
+        const showExercises = (day) => {
+            const container = document.getElementById('mainContainer');
+            container.innerHTML = '';
 
-      //   const exercisesToShow = exercisesData.slice(day * 8, (day + 1) * 8);
+            const startIndex = day * 8;
+            const endIndex = day === 2 ? exercisesData.length : (day + 1) * 8;
+            const exercisesToShow = exercisesData.slice(startIndex, endIndex);
 
-      //   exercisesToShow.forEach((exercise, index) => {
-      //     const figure = document.createElement('figure');
+            exercisesToShow.forEach((exercise, index) => {
+                const figure = document.createElement('figure');
+                const img = document.createElement('img');
+                img.src = exercise.img;
+                img.alt = `Exercise ${index + 1}`;
 
-      //     const img = document.createElement('img');
-      //     img.src = exercise.img;
-      //     img.alt = `image${index + 1}`;
+                const figcaption1 = document.createElement('figcaption');
+                figcaption1.textContent = exercise.name;
 
-      //     const figcaption1 = document.createElement('figcaption');
-      //     figcaption1.textContent = exercise.name;
+                const figcaption2 = document.createElement('figcaption');
+                figcaption2.textContent = exercise.repetitions;
 
-      //     const figcaption2 = document.createElement('figcaption');
-      //     figcaption2.textContent = exercise.repetitions;
+                figure.appendChild(img);
+                figure.appendChild(figcaption1);
+                figure.appendChild(figcaption2);
 
-      //     figure.appendChild(img);
-      //     figure.appendChild(figcaption1);
-      //     figure.appendChild(figcaption2);
+                container.appendChild(figure);
+            });
+        };
 
-      //     container.appendChild(figure);
-      //   });
-      // };
-      const showExercises = (day) => {
-  const container = document.getElementById('mainContainer');
-  container.innerHTML = '';
-
-  // Calculate the start index for the slice.
-  const startIndex = day * 8;
-
-  // Adjust the end index for the slice to include all remaining exercises on the last day.
-  const endIndex = day === 2 ? exercisesData.length : (day + 1) * 8;
-
-  const exercisesToShow = exercisesData.slice(startIndex, endIndex);
-
-  exercisesToShow.forEach((exercise, index) => {
-    const figure = document.createElement('figure');
-
-    const img = document.createElement('img');
-    img.src = exercise.img;
-    img.alt = `image${index + 1}`;
-
-    const figcaption1 = document.createElement('figcaption');
-    figcaption1.textContent = exercise.name;
-
-    const figcaption2 = document.createElement('figcaption');
-    figcaption2.textContent = exercise.repetitions;
-
-    figure.appendChild(img);
-    figure.appendChild(figcaption1);
-    figure.appendChild(figcaption2);
-
-    container.appendChild(figure);
-  });
-};
-      document.addEventListener('DOMContentLoaded', function() {
-    showExercises(0);
-  });
+        document.addEventListener('DOMContentLoaded', () => showExercises(0));
     </script>
     <script src="timer.js"></script>
-  </body>
+</body>
 </html>
+
