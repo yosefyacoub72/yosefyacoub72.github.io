@@ -10,21 +10,21 @@
     --mono: "Oxygen mono", monospace;
     --sans: Oxygen, sans-serif;
     --a: rgba(59, 209, 94, 0.974);
-}
-
-html {
+  }
+  
+  html {
     box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
+  }
+  
+  *,
+  *::before,
+  *::after {
     box-sizing: inherit;
-}
-
-body {
+  }
+  
+  body {
     background-color: var(--black);
-    font-family: var(--sans); 
+    font-family: var(--sans);
     color: var(--white);
     min-height: 100vh;
     display: flex;
@@ -33,55 +33,51 @@ body {
     justify-content: center;
     background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     padding: 2em;
-    margin: 0; /* Ensure no default margin */
-}
-
-.container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 1em;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: start; /* Align items to the start to avoid vertical stretching */
+    align-items: center;
     width: 100%;
-    max-width: 1000px; /* Set a maximum width for larger screens */
-    margin: auto; /* Center the container */
-}
-
-.container img {
-    width: 100%; /* Make image width responsive */
-    height: auto; /* Adjust height automatically */
-    object-fit: cover;
-    border-radius: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .container img {
+    width: 400px;
+    height: 400px;
+    object-fit: fill;
     border: 2px solid rgba(255, 255, 255, 0.18);
     padding: 3px;
-    transition: transform .5s, opacity 0.5s;
-}
-
-.container img:hover {
-    transform: scale(1.1);
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .container img:hover {
     opacity: 0.8;
-}
-
-figure figcaption {
+  }
+  
+  figure figcaption {
     text-align: center;
     font-size: 2rem;
-}
-
-@media screen and (max-width: 767px) {
+  }
+  
+  @media screen and (max-width: 767px) {
     .container {
-        grid-template-columns: 1fr; /* Stack items in a single column */
-        padding: 0; /* Adjust padding for smaller screens */
+      padding: 0;
     }
-
+  
     .container img {
-        border-radius: 15px;
-        max-width: 250px; /* Adjust image width for smaller screens */
-        margin: 0 auto; /* Center images within grid items */
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
     }
-
+  
     figure {
-        display: flex; /* Use flexbox for figure */
-        flex-direction: column; /* Stack image and caption */
-        align-items: center; /* Center contents horizontally */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-}
+  }  
