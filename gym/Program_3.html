@@ -93,9 +93,9 @@
       }
 
       window.onload = function() {
-        showExercises(0); // Display Day 1 exercises when the page loads
-
-        // Attach the event listeners to the buttons
+    showExercises(0);
+      };
+      window.onload = function() {
         document.getElementById('day1').addEventListener('click', () => showExercises(0));
         document.getElementById('day2').addEventListener('click', () => showExercises(1));
         document.getElementById('day3').addEventListener('click', () => showExercises(2));
