@@ -34,8 +34,7 @@ img {
   border: 2px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   overflow: hidden;
-  transition: transform 0.5s, opacity 1s; /* The animation will last 1 second now */
-
+  transition: transform 0.5s, opacity 1s;
 }
 
 .container img:hover {
@@ -48,6 +47,7 @@ footer {
   opacity: 0.8;
   color: #fff;
   padding: 10px;
+  text-align: center; /* Center text in the footer */
 }
 
 .footer-content {
@@ -66,13 +66,21 @@ footer {
 
 @media screen and (max-width: 767px) {
   .container {
-      height: auto;
-      padding: 20px;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center container contents horizontally */
+    justify-content: center; /* Center container contents vertically */
   }
 
   img {
-      width: 250px;
-      height: 250px;
+    width: 250px;
+    height: 250px;
+  }
+
+  footer {
+    text-align: center; /* Center footer content */
   }
 }
 
